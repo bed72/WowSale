@@ -1,4 +1,10 @@
-{
+const signInFailureMock = <String, dynamic>{
+  "code": 400,
+  "message": "Failed to authenticate.",
+  "data": {}
+};
+
+const signInSuccessMock = <String, dynamic>{
   "token": "6gJ1p72...",
   "record": {
     "verified": true,
@@ -13,4 +19,4 @@
     "created": "2024-05-11 19:39:59.377Z",
     "updated": "2024-05-11 19:43:53.260Z"
   }
-}
+};
