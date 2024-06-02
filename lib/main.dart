@@ -1,14 +1,20 @@
-import 'dart:developer';
 import 'dart:io';
+import 'dart:developer';
 
-import 'package:flutter/foundation.dart';
+import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
+
+import 'package:ohhferta/src/external/locators/locator.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  MainLocator()(GetIt.instance);
+
   runApp(const MyApp());
 }
 

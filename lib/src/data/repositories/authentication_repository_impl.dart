@@ -1,9 +1,8 @@
 import 'package:either_dart/either.dart';
 
-import 'package:ohhferta/src/domain/typedefs/domain_typedef.dart';
-
 import 'package:ohhferta/src/data/datasources/authentication_datasource.dart';
 
+import 'package:ohhferta/src/domain/typedefs/domain_typedef.dart';
 import 'package:ohhferta/src/domain/repositories/authentication_repository.dart';
 
 final class AuthenticationRepositoryImpl implements AuthenticationRepository {

@@ -14,7 +14,16 @@ final class HttpClientImpl implements HttpClient {
 
   HttpClientImpl({
     required Dio instance,
-  }) : _instance = instance;
+  }) : _instance = instance {
+    _instance.options = _options;
+  }
+
+  BaseOptions get _options => BaseOptions(
+        baseUrl: PathConfiguration.base.value,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      );
 
   @override
   Future<ExternalType> call({
