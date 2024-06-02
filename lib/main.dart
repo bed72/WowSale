@@ -1,23 +1,18 @@
-import 'dart:io';
-import 'dart:developer';
-
 import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
 
 import 'package:ohhferta/src/external/locators/locator.dart';
+
+import 'package:ohhferta/src/presentation/screens/application_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   MainLocator()(GetIt.instance);
 
-  runApp(const MyApp());
+  runApp(const ApplicationScreen());
 }
-
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -140,3 +135,4 @@ class _MultipleImageSelectorState extends State<MultipleImageSelector> {
     });
   }
 }
+*/
