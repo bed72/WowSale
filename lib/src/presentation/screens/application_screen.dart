@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:ioc_container/ioc_container.dart';
 
 import 'package:ohhferta/src/presentation/routes/routes.dart';
 
 class ApplicationScreen extends StatelessWidget {
-  const ApplicationScreen({super.key});
+  final IocContainer container;
+
+  const ApplicationScreen({super.key, required this.container});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      initialRoute: '/',
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: Routes.generateRoute,
+      routerConfig: routerConfig(container: container),
     );
   }
 }

@@ -1,16 +1,15 @@
-import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ohhferta/src/external/locators/locator.dart';
+import 'package:ohhferta/src/external/container/container.dart';
 
 import 'package:ohhferta/src/presentation/screens/application_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  MainLocator()(GetIt.instance);
+  final container = MainContainer()();
 
-  runApp(const ApplicationScreen());
+  runApp(ApplicationScreen(container: container));
 }
 /*
 class MyApp extends StatelessWidget {
